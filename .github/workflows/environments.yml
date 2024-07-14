@@ -13,7 +13,7 @@ jobs:
     environment: $ {{ inputs.environment-name }}
     env:
       USERNAME: ${{ vars.USERNAME }}
-      PASSWORD: ${{ vars.PASSWORD }}
+      PASSWORD: ${{ secrets.PASSWORD }}
     steps:
       - run: echo "${USERNAME}"
       - run: echo "${PASSWORD:0:1} ${PASSWORD#?}"

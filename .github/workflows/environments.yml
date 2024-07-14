@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: $ {{ inputs.environment-name }}
     env:
-      USERNAME: ${{ vars.USERNAME }}
-      PASSWORD: ${{ secrets.PASSWORD }}
+      USERNAME: ${{ vars.ENV_USERNAME }}
+      PASSWORD: ${{ secrets.ENV_PASSWORD }}
     steps:
       - run: echo "${USERNAME}"
       - run: echo "${PASSWORD:0:1} ${PASSWORD#?}"
